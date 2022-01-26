@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5L2TF9H');</script>
+<!-- End Google Tag Manager -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://bigpaw.id/tools/calculator/dog-calorie-calculator">
+
+    <meta name="description" content="Kalkulator Kalorie Anjing Anabul">
+
+    <title>BigPaw | Healthy Products for Your Dogs &amp; Cats</title>
+    <link rel="stylesheet" href="/assets/build/css/main.css?id=30acf4a84187db621fa6">
+    <script defer src="/assets/build/js/main.js?id=f6bdbdc1175cddd96cb4"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XJ7CKR74YE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XJ7CKR74YE');
+</script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
+  </head>
+
+  <body class="text-gray-900 font-sans antialiased">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5L2TF9H"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="container max-w-xl mx-auto px-5 py-10">
+        <a class="link" href="/">
+  👈🏻 Home
+</a>
+
+  <div class="text-center">
+    <img
+  class="rounded-full border-2 max-w-xs w-40 mx-auto shadow-md"
+  src="/assets/images/bigpaw-logo.jpg"
+  alt="BigPaw logo"
+/>
+  </div>
+
+  <div class="text-center m-5">
+    <span class="font-semibold text-2xl border-red borber-b-1">
+      Kalkulator Kalori Anabul 🐶 😺
+    </span>
+  </div>
+
+  <div>
+    <form class="form-card" id="dog-adult-calorie-calculator">
+      <div class="text-underline font-semibold mb-6">
+        Kalkulator Kalori Anjing Dewasa (adult dog)
+      </div>
+
+      <div class="form-group">
+        <label class="label">
+          🐾 Berat Anabul dalam KG
+        </label>
+
+        <input class="input" type="number" name="dogWeight" value="0" />
+      </div>
+
+      <div class="form-group">
+        <label class="label">
+          🏃 Kategori kebutuhan kalori anabul kamu
+        </label>
+
+        <select name="energyNeedsConstant" class="input">
+          <option value="0">-- Silahkan Pilih --</option>
+          <option value="90">90 -- 🛌 Anabul mager</option>
+          <option value="100">100 -- 🤡 Anabul sedikit aktif</option>
+          <option value="110">110 -- 💅 Anabul rumahan kadang aktif kadang santai</option>
+          <option value="120">120 -- 🤾 Anabul aktif, main terus</option>
+          <option value="130">130 -- 🦖 Anabul sangat aktif dan muscular 💪</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="label">
+          Kalori harian yang dibutuhkan
+        </label>
+
+        <div>
+          <b id="dog-adult-calorie-calculator-result">
+            -
+          </b>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="label">
+          Range kalori harian dari snack (5% - 10% kalori harian)
+        </label>
+
+        <div>
+          <b id="dog-adult-snack-calorie-calculator-result">
+            -
+          </b>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-action">🧐 Hitung Kalori</button>
+      </div>
+    </form>
+  </div>
+
+      <footer>
+        © 2021 <a class="link" href=https://bigpaw.id>BigPaw</a>
+      </footer>
+    </div>
+
+    <script>
+  $(document).ready(function () {
+    const $dogAdultCalorieCalculatorForm = $('#dog-adult-calorie-calculator');
+    const $dogWeight = $('input[name=dogWeight]');
+    const $energyNeedsConstant = $('select[name=energyNeedsConstant]');
+    const $dogAdultCalorieResult = $('#dog-adult-calorie-calculator-result');
+    const $dogAdultSnackCalorieCalculatorResult = $('#dog-adult-snack-calorie-calculator-result');
+
+    $dogAdultCalorieCalculatorForm.on('submit', function (e) {
+      e.preventDefault();
+      const dogWeight = Number($dogWeight.val());
+      const energyNeedsConstant = Number($energyNeedsConstant.val());
+      const dailyCalorie = Math.round(
+          Math.pow(dogWeight, 0.75) * energyNeedsConstant
+      );
+
+      $dogAdultCalorieResult.text(dailyCalorie + ' kalori');
+      $dogAdultSnackCalorieCalculatorResult.text(
+          Math.round((0.05 * dailyCalorie)) + ' kalori - ' + Math.round((0.1 * dailyCalorie)) + ' kalori'
+      );
+    });
+  });
+</script>
+  </body>
+</html>
