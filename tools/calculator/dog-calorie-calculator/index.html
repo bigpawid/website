@@ -16,7 +16,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="description" content="Kalkulator Kalorie Anjing Anabul">
 
     <title>BigPaw | Healthy Products for Your Dogs &amp; Cats</title>
-    <link rel="stylesheet" href="/assets/build/css/main.css?id=30acf4a84187db621fa6">
+    <link rel="stylesheet" href="/assets/build/css/main.css?id=bf754912004554b3a485">
     <script defer src="/assets/build/js/main.js?id=f6bdbdc1175cddd96cb4"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -61,63 +61,67 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </span>
   </div>
 
-  <div>
-    <form class="form-card" id="dog-adult-calorie-calculator">
-      <div class="text-underline font-semibold mb-6">
-        Kalkulator Kalori Anjing Dewasa (adult dog)
+  <form class="form-card" id="dog-adult-calorie-calculator">
+    <div class="text-underline font-semibold mb-6">
+      Kalkulator Kalori Anjing Dewasa (adult dog)
+    </div>
+
+    <div class="form-group">
+      <label class="label">
+        🐾 Berat Anabul dalam KG
+      </label>
+
+      <input class="input" type="number" name="dogWeight" value="0" />
+    </div>
+
+    <div class="form-group">
+      <label class="label">
+        🏃 Kategori kebutuhan kalori anabul kamu
+      </label>
+
+      <select name="energyNeedsConstant" class="input">
+        <option value="0">-- Silahkan Pilih --</option>
+        <option value="90">90 -- 🛌 Anabul mager</option>
+        <option value="100">100 -- 🤡 Anabul sedikit aktif</option>
+        <option value="110">110 -- 💅 Anabul rumahan kadang aktif kadang santai</option>
+        <option value="120">120 -- 🤾 Anabul aktif, main terus</option>
+        <option value="130">130 -- 🦖 Anabul sangat aktif dan muscular 💪</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="label">
+        Kalori harian yang dibutuhkan
+      </label>
+
+      <div>
+        <b id="dog-adult-calorie-calculator-result">
+          -
+        </b>
       </div>
+    </div>
 
-      <div class="form-group">
-        <label class="label">
-          🐾 Berat Anabul dalam KG
-        </label>
+    <div class="form-group">
+      <label class="label">
+        Range kalori harian dari snack (5% - 10% kalori harian)
+      </label>
 
-        <input class="input" type="number" name="dogWeight" value="0" />
+      <div>
+        <b id="dog-adult-snack-calorie-calculator-result">
+          -
+        </b>
       </div>
+    </div>
 
-      <div class="form-group">
-        <label class="label">
-          🏃 Kategori kebutuhan kalori anabul kamu
-        </label>
+    <div class="form-group">
+      <button class="btn btn-action">🧐 Hitung Kalori</button>
+    </div>
+  </form>
 
-        <select name="energyNeedsConstant" class="input">
-          <option value="0">-- Silahkan Pilih --</option>
-          <option value="90">90 -- 🛌 Anabul mager</option>
-          <option value="100">100 -- 🤡 Anabul sedikit aktif</option>
-          <option value="110">110 -- 💅 Anabul rumahan kadang aktif kadang santai</option>
-          <option value="120">120 -- 🤾 Anabul aktif, main terus</option>
-          <option value="130">130 -- 🦖 Anabul sangat aktif dan muscular 💪</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label class="label">
-          Kalori harian yang dibutuhkan
-        </label>
-
-        <div>
-          <b id="dog-adult-calorie-calculator-result">
-            -
-          </b>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label class="label">
-          Range kalori harian dari snack (5% - 10% kalori harian)
-        </label>
-
-        <div>
-          <b id="dog-adult-snack-calorie-calculator-result">
-            -
-          </b>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <button class="btn btn-action">🧐 Hitung Kalori</button>
-      </div>
-    </form>
+  <div class="mt-4">
+    Formula kalkulator kalori diatas berdasarkan formula
+    <a class="link" href="https://rawfedandnerdy.com/calorie-calculator" target="_blank">disini</a>
+    ya.
   </div>
 
       <footer>
